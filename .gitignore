@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+
+# PyCharm settings
+.idea/
+
+# VSCode settings (just in case)
+.vscode/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Log and cache files
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# Excel backup or temporary files
+~$*.xlsx
+
+# pytest cache
+.pytest_cache/
+
+# MyPy and coverage tools
+.mypy_cache/
+coverage.xml
+htmlcov/
+
+# Local test data or output folders (optional, if you create them)
+figures/
+outputs/
