@@ -1,0 +1,25 @@
+[project]
+name = "calipyr"
+version = "0.1.0"
+description = "Calibration and processing toolkit for geotechnical analysis and FLAC2D modelling"
+authors = [
+    { name = "Paul le Roux", email = "your.email@example.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scipy",
+    "openpyxl",
+    "config",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

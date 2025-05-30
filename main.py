@@ -1,39 +1,17 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import configparser
+from pathlib import Path
 
+def load_config(config_file="config/settings.ini"):
+    config = configparser.ConfigParser()
+    config.read(config_file)
+    return config
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
-
-
-
-
-# Steps starting our the CaliPyr project
-
-# Make sure all the usual packages are installed
-# In the Pycharm Terminal [Alt+F12] run:
-(.venv) C:\Python\Projects\CaliPyr git:[master]
-python.exe -m pip install --upgrade pip
-pip install numpy pandas
-
-
-
-# Change from master (local) to main branches before first commit
-git branch -m master main
-git push -u origin main
-git remote add origin https://github.com/paul-leroux/calipyr.git
-git remote -v
-
-git add .
-git commit -m "Initial commit"
-git push -u origin main
+# Optional convenience: get paths as Path objects
+def get_paths(config):
+    base = Path(__file__).resolve().parent.parent
+    data_dir = base / config["paths"]["data_dir"]
+    output_dir = base / config["paths"]["output_dir"]
+    figures_dir = base / config["paths"]["figures_dir"]
+    return data_dir, output_dir, figures_dir
