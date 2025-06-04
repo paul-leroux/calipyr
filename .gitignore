@@ -1,0 +1,24 @@
+/data/
+# Excel and CSV files
+*.xlsx
+*.xls
+*.csv
+
+# figures and exports
+*.png
+*.pdf
+*.svg
+*.eps
+
+# logs and temp files
+*.log
+*.tm
+
+# pickled or binary data
+*.pkl
+*.npz
+*.h5
+*.mat
+
+
+/scripts/INTERACTIVE.py
